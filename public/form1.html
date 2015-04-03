@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OiSYS Application</title>
+		
+			<script type="text/javascript" src="javascripts/Jqury library.js"></script>
+			<script type="text/javascript" src="javascripts/script.js"></script>
+	</head>
+	<body>
+		<h1>Start building Application now</h1>
+			<form action = "/users" method = "post">co
+
+				<legend>Personal information:</legend>
+					First name:<br>
+				<input type="text" class="abc"name="firstname">
+				<br>
+					Last name:<br>
+				<input type="text" class = "xyz" name="lastname">
+				<br><br>
+				<button type="button">Summit</button>
+
+			</form>
+				<script>
+					$(document).ready(function(){
+						$("button").click(function(){
+							var firstName = $("input[name = 'firstname']").val();
+							var lastName = $("input[name = 'lastname']").val();
+								if ((firstName == "") && (lastName == "")){
+									alert("Enter value");
+								};
+						});
+					});
+				</script>
+	</body>
+</html>
