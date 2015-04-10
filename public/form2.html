@@ -6,7 +6,7 @@
 			<script type="text/javascript" src="javascripts/Jqury library.js"></script>
 			<script type="text/javascript" src="javascripts/script.js"></script>
 	</head>
-	<body>
+		<body>
 		
 			<form action = "/users" method="post">
 
@@ -18,14 +18,49 @@
 				<input type="text" class = "xyz" name="lastname">
 				<br><br>
 				<button>Submit</button>
-
+				
 			</form>
+			<div id = "abc"></div>
+			<div id = "xyz"></div>
 				<script>
 					$(document).ready(function(){
+					$.ajax({
+							url: "/users/",
+							method: "get",
+							success: function(my){
+								console.log(my);
+								for(i = 0; i < my.length; i++){
+									console.log(my[i])
+									$("#xyz").append("<p>my firstname is "+my[i].firstName+ "and my lastName is "+my[i].lastName+ "my id is "+my[i].id+ "</p>");
+								
+								};
+							},	
+					});
+
 						$("button").click(function(event){
-								event.preventDefault();
-								});
+							event.preventDefault();	
+							var firstName = $("input[name = 'firstname']").val();
+							var lastName =  $("input[name = 'lastname']").val();
+							$.ajax({
+									url:"/users",
+									type:"post",
+									data:{
+										firstName,
+										lastName,
+										  },
+							
+									success:function(data){
+											
+										$("#abc").append("my firstName is "+data.firstName+" and my lastName is "+data.lastName+" my Id is "+data.id);
+									}
+							});
+							
 						});
+						
+					});
+				
+					
+					
 				</script>
-	</body>
+		</body>
 </html>
