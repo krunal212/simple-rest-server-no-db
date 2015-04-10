@@ -3,7 +3,7 @@
 	<head>
 		<title>OiSYS Application</title>
 		
-			<script type="text/javascript" src="javascripts/Jqury library.js"></script>
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 			<script type="text/javascript" src="javascripts/script.js"></script>
 	</head>
 		<body>
@@ -30,8 +30,8 @@
 							success: function(my){
 								console.log(my);
 								for(i = 0; i < my.length; i++){
-									console.log(my[i])
-									$("#xyz").append("<p>my firstname is "+my[i].firstName+ "and my lastName is "+my[i].lastName+ "my id is "+my[i].id+ "</p>");
+									console.log(my[i]);
+									$("#xyz").append("<p> my firstname is "+my[i].firstName+ "and my lastName is "+my[i].lastName+ "my id is "+my[i].id+ "</p>");
 								
 								};
 							},	
