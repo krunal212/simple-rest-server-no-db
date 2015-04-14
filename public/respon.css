@@ -17,10 +17,21 @@
        }
 .main  {
 		float:left;
-		width:280px;
+		width:300px;
 		text-align:justify;
 		margin-top:10px;
-		margin-left:130px;
+		margin-left:100px;
+	}
+	.pic{
+		margin-left:4px;
+		height:200px;
+		width:300px;
+	}
+	@media screen and (max-width:900px){
+		.third{
+			width:700px;
+			height:300px;
+		}
 	}
 	@media screen and (max-width:500px){
 		.main{
@@ -31,10 +42,19 @@
 			float:left;
 			font-size:80%;
 		}
+			.third{
+		width:160px;
+		height:240px;
+		}
+		.pera{
+		width:380px;
+		}
+		
+		
 		.pic{
-			width:80%;
-			height:80%;
-			margin-right:10px;
+			width:70%;
+			height:70%;
+			margin-left:15px;
 		}
 		.hi{
 			background-color:#FAD99B;
