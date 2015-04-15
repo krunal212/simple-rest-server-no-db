@@ -1,0 +1,12 @@
+.nav-pills,li{
+		border-bottom:1px.solid.#9E9E9E;
+}
+.nav-pills{
+		margin-left:20px;
+		text-indent:20px;
+		border:1px.solid.#9E9E9E;
+		border-radius:3px
+}
+.nav-pills ,li:last-clild{
+		border-bottom:none;
+}
