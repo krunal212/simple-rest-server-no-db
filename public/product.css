@@ -1,12 +1,23 @@
-.nav-pills,li{
-		border-bottom:1px.solid.#9E9E9E;
-}
+
 .nav-pills{
 		margin-left:20px;
 		text-indent:20px;
-		border:1px.solid.#9E9E9E;
-		border-radius:3px
+		border-radius:5px;
+		border:1px solid black;
+		
 }
-.nav-pills ,li:last-clild{
-		border-bottom:none;
+.side{
+	border-bottom:1px solid black;
+}
+
+.well{
+	background-color:#E8E8E8;
+
+}
+.price{
+	float:right;
+	margin-left:120px;
+	width:300px;
+	margin-top:-50px;
+	
 }
