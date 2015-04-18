@@ -12,12 +12,17 @@
 
 .well{
 	background-color:#E8E8E8;
+	height:100px;
 
 }
 .price{
 	float:right;
-	margin-left:120px;
-	width:300px;
-	margin-top:-50px;
+	margin-right:150px;
 	
+}
+.delete{
+	margin-right:150px;
+	margin-bottom:10px;
+	float:right;
+
 }
