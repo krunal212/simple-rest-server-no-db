@@ -1,24 +1,24 @@
 $(document).ready(function(){
 	$(".add").on("click",function(event){
 		event.preventDefault();	
-		var item = $("input[name = 'item']").val();
-		var des =  $("input[name = 'des']").val();
-		var price = $("input[name = 'price']").val();
+		itemList={
+				item: $("input[name = 'item']").val(),
+				des: $("input[name = 'des']").val(),
+				price: $("input[name = 'price']").val(),
+		}	
 	
 			$.ajax({
 					url:"/users",
 					type:"post",
-					data:{
-						item,
-						des,
-						price,
-						},
-							success:function(data){
-								$(".item1").append(data.item);
-								$(".des1").append(data.des);
-								$(".price").append(data.price);
-								}
-					});
+					data: itemList,
+					dataType:"json",
+					success:function(a){
+						var newJSON = a;
+						$(".appe").append('<div class="jumbotron col-md-8" id='+newJSON.id +'class="glyphicon glyphicon-remove pull-right"><button class="glyphicon glyphicon-remove pull-right delete"></button><button type="button" class="btn btn-primary productPrice pull-right">'+newJSON.price+'</button><h3 class="col-md-6 productName">'+newJSON.item+'</h3><h4 class="col-md-6 productDes">'+newJSON.des+'</h4></div>');
+									
+						}
+			});
 	});
+});
 	
-})
+	
