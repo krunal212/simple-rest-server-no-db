@@ -1,11 +1,13 @@
 $(document).ready(function(){
 	$(".appe").on("click","button",function(){
-		$(this).parent('div').remove(),
+		var element = this;
 			$.ajax({
-				url:"/products/" + this.id,
+				url:"/products/" + element.id,
 				type:"delete",
 				success: function(data){
-					$(this).parent('div').remove();
+					if(data.success ='success'){
+						$(element).parent('div').remove();
+					}
 				}
 			});
 	});
